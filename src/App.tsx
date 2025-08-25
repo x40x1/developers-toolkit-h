@@ -3,9 +3,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import { Code, Hash, Database, Shuffle, Calculator, Zap } from '@phosphor-icons/react'
+import { Toaster } from 'sonner'
+import { Code, Hash, Database, Calculator, Zap } from '@phosphor-icons/react'
 
-// Tool Components
+// Tool Components - importing without .tsx extensions as per Vite best practices
 import Base64Tool from '@/components/tools/Base64Tool'
 import URLEncoderTool from '@/components/tools/URLEncoderTool'
 import HTMLEntityTool from '@/components/tools/HTMLEntityTool'
@@ -77,6 +78,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Toaster />
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
